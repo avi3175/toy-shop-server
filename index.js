@@ -86,7 +86,10 @@ app.delete('/addstoy/:id',async(req,res)=>{
 })
 
 
-
+app.patch('/addstoy/:id',async(req,res)=>{
+  const updatedToy = req.body
+  console.log(updatedToy)
+})
 
 
 
