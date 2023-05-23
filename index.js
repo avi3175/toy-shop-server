@@ -36,11 +36,11 @@ async function run() {
 
 
     app.get('/toys', async (req, res) => {
-      const query = {}
-      const options = {
-        sort:{"price":-1}
-      }
-      const cursor = toysCollection.find(query,options)
+      // const query = {}
+      // const options = {
+      //   sort:{"price":-1}
+      // }
+      const cursor = toysCollection.find()
       const result = await cursor.toArray()
       res.send(result)
     })
